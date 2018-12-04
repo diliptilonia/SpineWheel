@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TTFortuneWheelSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c2k-m8-tps" customClass="TTFortuneWheel" customModule="TTFortuneWheel">
+                                <rect key="frame" x="215.5" y="332.5" width="337" height="337"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="c2k-m8-tps" secondAttribute="height" multiplier="1:1" id="rt5-XG-ZhZ"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wheelFrame" translatesAutoresizingMaskIntoConstraints="NO" id="YfA-K8-wNE">
+                                <rect key="frame" x="199.5" y="319" width="369" height="386"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YfA-K8-wNE" secondAttribute="height" multiplier="369:386" id="ynI-af-LcD"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zd-LZ-YE8">
+                                <rect key="frame" x="296" y="420" width="176" height="178"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="9" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="-29" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="SPIN" backgroundImage="spin">
+                                    <color key="titleColor" red="0.90196078431372551" green="0.90588235294117647" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="rotateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fiX-hU-lDd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YfA-K8-wNE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dfu-qR-32M"/>
+                            <constraint firstItem="c2k-m8-tps" firstAttribute="centerY" secondItem="YfA-K8-wNE" secondAttribute="centerY" constant="-11" id="Eql-30-prR"/>
+                            <constraint firstItem="c2k-m8-tps" firstAttribute="leading" secondItem="YfA-K8-wNE" secondAttribute="leading" constant="16" id="Rms-bu-Po3"/>
+                            <constraint firstItem="8Zd-LZ-YE8" firstAttribute="centerY" secondItem="YfA-K8-wNE" secondAttribute="centerY" constant="-3" id="U9W-hx-6wj"/>
+                            <constraint firstItem="8Zd-LZ-YE8" firstAttribute="centerX" secondItem="YfA-K8-wNE" secondAttribute="centerX" id="gVN-Zw-t8W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YfA-K8-wNE" secondAttribute="trailing" constant="3" id="iBC-v9-f4n"/>
+                            <constraint firstItem="c2k-m8-tps" firstAttribute="centerX" secondItem="YfA-K8-wNE" secondAttribute="centerX" id="iGq-BZ-NRD"/>
+                            <constraint firstItem="YfA-K8-wNE" firstAttribute="trailing" secondItem="c2k-m8-tps" secondAttribute="trailing" constant="16" id="ib5-Et-uGr"/>
+                            <constraint firstItem="YfA-K8-wNE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="3" id="lfo-tP-rQp"/>
+                            <constraint firstItem="YfA-K8-wNE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uam-Su-zEz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="spinningWheel" destination="c2k-m8-tps" id="eGr-RI-cU4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="spin" width="176" height="178"/>
+        <image name="wheelFrame" width="369" height="386"/>
+    </resources>
+</document>
